@@ -1,0 +1,485 @@
+
+/***** CSS styling for friendZone social message site *****/
+
+/*  SECTION 1: Override bootstrap default values
+    SECTION 2: Header Settings
+    SECTION 3: Log in and Sign up settings
+    SECTION 4: Footer settings
+    SECTION 5: New Message page
+    SECTION 6:
+    SECTION 7:
+
+*/
+
+/****** SECTION 1: Override default bootstrap ******/
+
+/* Primary Button Color  adjustment*/
+.btn-primary{
+    background-color: powderblue;
+    color: black;
+    border-color: slategray;
+}
+.btn-primary:hover{
+    background-color: slategray;
+    border-color: slategray;
+}
+
+.btn-primary:disabled{
+   background-color: lightgray;
+    border: 1px solid slategray;
+    outline: none;
+}
+/* Link colour adjusments */
+/*ul.nav li a, ul.nav li a:visited {
+    color: black
+}
+
+ul.nav li a:hover, ul.nav li a:active {
+    color: slategray
+}
+
+ul.nav li.active a {
+    color: black
+}*/
+
+
+/*Colour and opacity of odd row background*/
+/*.table-striped>tbody>tr:nth-child(odd)>td{
+    background-color: rgba(220,220,220,.5);
+
+}*/
+/*Colour and opacity of even row background*/
+.table-striped>tbody>tr:nth-child(odd)>td{
+    background-color: rgba(176,224,230,.4);
+}
+
+
+
+/* Alter default checkbox behaviour - based on article by Milos Protic
+ https://dev.to/proticm/styling-html-checkboxes-is-super-easy-302o
+ Uses pseudo class to reveal checked status */
+
+.checkbox {
+    cursor: pointer;
+    position: relative;
+}
+
+.checkbox > span {
+/*    color: #34495E;*/
+    padding: 0.5rem 0.25rem;
+}
+/* Disable the default checkbox style for all browsers.
+    Define the size of the check box and the style of the outline color */
+.checkbox > input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    height: 15px;
+    width: 15px;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+
+}
+/* Define the background and outline colours when checked */
+.checkbox > input:checked {
+    border: 1px solid slategray;
+    background-color: powderblue;
+
+}
+/* Set the content (tick icon), its colour and position of pseudo-class: revealed when box is checked */
+.checkbox > input:checked + span::before {
+    content: '\2713';     /* Tick character */
+    display: block;
+    text-align: center;
+    color: slategray;
+    position: absolute;
+    left: 0.1rem;       /* Minor adjustments so tick appears centrally */
+    top: -0.1rem;
+}
+
+/* Overwrite the bootstrap focus outline colour for all input types
+    https://stackoverflow.com/questions/14820952 */
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+input[type="submit"]:focus,
+.uneditable-input:focus {
+    border: 1px solid powderblue;
+    outline:  none;
+
+}
+/****** SECTION 2: Header  settings *******/
+
+/* Adjustment for fixed Navbar*/
+body {
+    min-height: 100%;
+    padding-top: 70px;
+}
+
+/*Wrap the whole page and just it to fit the entire page even when empty*/
+.wrapper{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.navbar {
+    background-color: powderblue;
+
+}
+.nav-text{
+    color: black;
+}
+.update-profile{
+    top: -50px;
+}
+/* Display current filtering of results */
+.breadcrumb {
+    position: fixed;
+    top: 110px;
+    z-index: 10;
+    /*width: fit-content;*/
+    background-color: white;
+}
+
+.pg-disp{
+    margin-left: 7em;
+}
+
+.brand-logo{
+    /*filter: drop-shadow(1px 1px 3px slategrey);*/
+    margin-right: 1em;
+    margin-left: 5em;
+/*    max-width: 90%;
+    height: auto;*/
+}
+/* Scale up icons */
+.fa{
+    transform: scale(2);
+    margin: .2em;
+}
+
+/* Position search error message */
+.search-err{
+    position: relative;
+    top: -20px;
+    left: 10px;
+    opacity: 0;
+
+}
+/* Adust search box area to be central */
+.search-div{
+    position: relative;
+    top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    /* when screen is < 768px */
+    /* Adjustment to allow for the collapsed state of the nav bar*/
+    .navbar {
+        position: relative;
+    }
+
+    .breadcrumb {
+        position: relative;
+        top: -100px;
+    }
+
+    .pg-disp {
+        margin-left: 1em;
+    }
+
+    body {
+        padding-top: 0px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* when screen is < 768px */
+    .breadcrumb {
+        position: static;
+    }
+}
+@media screen and (max-width: 882px){
+    .brand-logo{
+        margin-left: 0.5em;
+    }
+}
+
+/***** SECTION 3 CSS for login and sign up screens *****/
+
+
+.login{
+    justify-self: center;
+    margin-top: 10%;
+    margin-bottom: 20%;
+    margin-right: 0;
+    height: 100%;
+}
+
+/* Shape the login window and centalise it using transform translate properties */
+div.login-box {
+    position: static;
+    margin: auto;
+    top: 0%;
+    left: 0%;
+/*    height: 70%;*/
+    width: 40%;
+    transform: translate(0%,0%); /* off set the position by 50% of the container*/
+    align-items: center;
+    justify-content: center;
+    border: 1px solid slategray;
+    border-radius: 20px;
+}
+/* Shape and colour the top stripe of input box*/
+div.login-box-top{
+    height: 20%;
+    border-radius: 18px 18px 0px 0px;
+    border-bottom: 1px solid slategray;
+    background-color: powderblue;
+    align-items: center;
+    justify-content: center;
+}
+
+div.login-box-body{
+    height: 80%;
+    border-radius: 0px 0px 18px 18px;
+    justify-content: center;
+    align-items: center;
+
+}
+/* Scale the logo to the space available as screen size reduces */
+.brand-logo-big{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+    height: auto;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+/* Center logo in the top stripe of the login/new account box */
+div.image{
+    width: fit-content;
+    margin: auto;
+}
+/* Form adjustments  */
+.form-login{
+    align-items: center;
+    margin: auto;
+    padding: 2% 15%;
+
+}
+/* Center remember me checkbox and label */
+.center{
+    margin: auto;
+    align-content: center;
+    justify-content: center;
+    width: fit-content;
+}
+/* Hide error msg text */
+.toggle-txt{
+    opacity: 0;
+}
+/* Responsive adjustments to width of the login/new account forms */
+
+@media screen and (max-width: 1100px) { /* when screen is < 1100px */
+    div.login-box {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 600px) { /* when screen is < 600 px */
+    div.login-box {
+        width: 95%;
+    }
+}
+
+
+
+/********** SECTION 4 CSS for footer **********/
+
+/*background */
+
+#footer{
+    background-color: powderblue;
+    margin-top: 2em;
+}
+
+/***** SECTION 5 CSS for homepage *****/
+.msg-container{
+    min-height: 90%;
+}
+
+/* Message display settings */
+.msg-box {
+    position: static;
+ /*   top: 50%;
+    left: 50%;*/
+    /*    height: 70%;*/
+    /*width: 85%;*/
+    /*transform: translate(-50%,0%);*/ /* off set the position by 50% of the container*/
+    align-items: center;
+    justify-content: center;
+    border: 1px solid slategray;
+    border-radius: 20px;
+    margin: 3em;
+}
+
+/* Shape and colour the top stripe of input box*/
+.msg-box-top{
+/*    height: 20%;*/
+    border-radius: 18px 18px 0px 0px;
+    border-bottom: 1px solid slategray;
+    background-color: powderblue;
+    align-items: center;
+    justify-content: center;
+
+}
+/* shape the lower corners ot the message body */
+.msg-box-body{
+/*    height: 80%;*/
+    border-radius: 0px 0px 18px 18px;
+    justify-content: center;
+    align-items: center;
+}
+/* Col widths of title strip elements */
+.msg-t-w{
+    width: fit-content;
+}
+
+/* Dividing line for comment section */
+.comments{
+    border-top: 2px solid slategray;
+}
+
+/* fix the size of the user col */
+.tab-usr{
+    width: 12%;
+}
+
+.tab-date{
+    color: black;
+}
+
+/* override bootstrap default link colour for font awesome icons
+    associate text links.  */
+.fa-trash {
+    color: black; }
+.fa-trash:hover{
+    color: slategray;
+}
+
+/* Comment button and link */
+.fa-plus-circle{
+    color:black;
+    text-decoration: none;
+}
+.fa-plus-circle:hover{
+    color: slategray;
+}
+.link-add-com{
+    color:black;
+    text-decoration: none;
+}
+.link-add-com:hover{
+    color:slategray;
+
+}
+
+/* Icon and link of the comment poster */
+a.icon-usr:hover {
+    opacity: 0.5;
+}
+a:link.icon-usr{
+    color: slategrey;
+}
+a.icon-usr:visited{
+    color: slategray;
+}
+
+.icon-usr-t{
+    color: black;
+    font-weight: bold;
+}
+.icon-usr-t:hover{
+    opacity: 0.6;
+
+}
+a.icon-usr:visited{
+    color: slategray;
+}
+
+/* Pagination icons*/
+.page{
+    color: black;
+}
+.page:hover{
+    color: slategray;
+}
+
+/* Delete Conformation Pop Up Settings */
+.confirm-box{
+    position: fixed;
+    top: 50%;
+    left:52%;
+    transform: translate(-50%,-50%);
+    border: 2px solid slategray;
+    max-width: 90%;
+    /*background-color: rgba(176,224,230,.4);*/
+    background-color: #e1dede;
+    border-radius: 25px;
+}
+
+.w-80 {
+    width: 80%;
+}
+h4.delete{
+    display: inline;
+}
+.fa-check{
+    transform: scale(2);
+
+}
+/*  Responsive adjustment to display messages using the full width of the screen on small devices*/
+
+@media screen and (max-width: 768px) {
+    /* when screen is < 1100px */
+    .msg-container {
+        width: 100%
+    }
+/*    .tab-usr {
+        width: auto;
+    }*/
+    .msg-box {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+/********** SECTION 5 CSS for new message page **********/
+
+.new-msg-body{
+    min-height: 50vh;
+    border-radius: 0px 0px 20px 20px;
+}
+
+#newButton{
+    border: none;
+    margin-top: -2em;
+
+}

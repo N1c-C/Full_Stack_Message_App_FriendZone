@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Header file for friendZone provides customised navbar showing username
+Note Will only work as an included file: uses Authenticate=>sanitise() for username -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>FriendZone</title>
+
+    <!-- Chosen css framework -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!--Icon library-->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!--Custom CSS options-->
+    <link rel="stylesheet" href="../css/friendzone.css">
+
+    <!--js libraries-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../js/pwstrength-bootstrap.js"></script>
+    <script src="../js/home.js"></script>
+
+    <!--Tinymce Text editor api-->
+    <script src="https://cdn.tiny.cloud/1/o16uyg28jfl6yilx53jv7f7kihxxacxwzqx8qzjpylmgd74k/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+</head>
+
+
+
+<div class = 'row confirm-box align-content-center justify-content-center msg-t-w' >
+            <div class='w-80'>
+                <div class='row float-end msg-t-w' style='align-self: end'>
+            <a id='' onclick='cancelConfirm(this.dataset.value)' class='link-add-com'  title='Cancel' data-value = '' aria-label='Cancel comment' ><i class= 'fa fa-times float-right pt-1 '></i></a></div>
+            </div>
+            <H2 class='text-center py-2'>Confirm Delete</H2>
+            <h5 class='text-center'>This can not be undone.</h5>
+                <br><br>
+                <a onclick='delMsg(this.id)' class = 'btn btn-primary msg-t-w mb-3'    aria-label='Confirm delete'><i class='fa fa-arrow-circle-right ms-5 me-5 py-1'></i></a>
+                <br><br>
+            </form>
+        </div>
+
+
+
+
+
+
+

@@ -1,0 +1,70 @@
+
+/* CSS for login and sign up screens*/
+
+/* Fix login display  centrally */
+
+/*div.login{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}*/
+
+/* Shape the login window and centalise it using transform translate properties */
+div.login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 70%;
+    width: 40%;
+    transform: translate(-50%,-50%); /* off set the position by 50% of the container*/
+    align-items: center;
+    justify-content: center;
+    border: 2px solid slategray;
+    border-radius: 20px;
+}
+
+div.login-box-top{
+    height: 20%;
+    border-radius: 18px 18px 0px 0px;
+    background-color: powderblue;
+    align-items: center;
+    justify-content: center;
+}
+
+div.login-box-body{
+    height: 80%;
+    border-radius: 0px 0px 18px 18px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+div.brand-logo-big{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.image{
+    width: fit-content;
+    margin: auto;
+}
+/* Fix the  */
+.form-login{
+/*    width: fit-content;
+    height: fit-content;*/
+/*    justify-content: center;*/
+    align-items: center;
+    margin: auto;
+    padding-left: 15%;
+    padding-right: 15%;
+
+}
+/* Center remember me checkbox and label */
+.center{
+    margin: auto;
+    align-content: center;
+    justify-content: center;
+    width: fit-content;
+}

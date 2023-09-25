@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FriendZone sign up</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!--Icon library-->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/friendzone.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="./js/pwstrength-bootstrap.js"></script>
+    <script type="text/javascript" src="./js/signup.js"></script>
+
+</head>
+
+
+<body>
+<div class = "flex-row  login">
+    <div class = " login-box row">
+        <div class = "row login-box-top"><div class="image"><img class="brand-logo-big" src="./img/logo_v5_dark.png" alt="logo" width = "180"></div></div>
+        <div class = "row login-box-body bg-light " >
+            <form class="form-login row" >
+
+                <h3 class="text-center">New account sign up</h3>
+                <br><br><br>
+                <span class="text-danger toggle-txt" id="errEmail">Weak</span>
+                <br>
+                <!-- email -->
+                <input type="email" id="email" name="email" aria-label="email" required aria-required="true" placeholder="email address"  >
+                <br>
+                <span class="text-danger toggle-txt" id="errUser">Weak</span>
+                <!-- username -->
+                <input type="text" id="userName" name="userName" aria-label="Username" required aria-required="true" placeholder="Username"  >
+                <br>
+                <span class="text-danger toggle-txt" id="errPwd">Weak</span>
+                <!--password -->
+                <input type="password" id="pwd" name="pwd" aria-label="password" required aria-required="true" placeholder="password" >
+                <span class="text-secondary">min 8 chars: 1 capital & 1 special letter</span>
+                <br>
+
+                <div class="center">
+                    <label class="checkbox">
+                        <input type="checkbox" id="poster" name="poster" aria-label="Become a poster and post comments">
+                            <span>
+                                Poster account (Leave comments)
+                            </span>
+                        </input>
+                    </label>
+                </div>
+                <br><br>
+                <input  type ="submit" class = " m-auto btn btn-primary"  id="signup" name="signup" aria-label="create account" value="Create account"><br><br><br><br>
+
+            </form>
+
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

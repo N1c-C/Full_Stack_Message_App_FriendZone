@@ -1,0 +1,42 @@
+
+<!--For use as an inclusion file requires login_header  and the footer-->
+<!-- Display the login window -->
+
+
+<div class = "flex-row  login">
+    <div class = " login-box row"> <!-- Outline Div with rounded corners -->
+        <div class = "row login-box-top"> <!--Branding Stripe header -  upper corners rounded (css) -->
+            <div class="image"> <!--Div to center logo within the branding header-->
+                <img class="brand-logo-big" src="./img/logo_v5_dark.png" alt="logo" width = "200">
+            </div>
+        </div>
+        <div class = "row login-box-body bg-light " >  <!-- main form section of window - lower corners rounded (css) -->
+            <form class="form-login row">
+                <h3 class="text-center">Please sign in</h3><br>
+                <span class="text-danger toggle-txt" name="errEmail" id="errEmail">error text</span>
+                <input class="text-field" type="email" id="email" name="email" aria-label="email" required aria-required="true" placeholder="email address" ><br><br>
+                <span class="text-danger toggle-txt" name="errPwd" id="errPwd">error text</span>
+                <input class="text-field" type="password" id="pwd" name="pwd" aria-label="password" required aria-required="true" placeholder="password" ><br>
+                <div class="center">
+                    <label class="checkbox"> <!--Default checkbox overwritten with css-->
+                        <input type="checkbox" id="remember" name="remember" aria-label="remember">
+                        <span> Remember me </span>
+                    </label>
+                </div>
+                <br><br>
+                <!--login button-->
+                <input   class = "btn btn-primary" type="submit" id="login" name="login" aria-label="sign in" value = "Sign in">
+                <br><br>
+                <h6 class="text-center">Or</h6>
+                <!--new account button-->
+                <a href="new_account.php" class = "btn btn-primary" value="New account" id="signup" name="signup" aria-label="signup">New account</a>
+                <br><br>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
