@@ -1,22 +1,30 @@
 # friendZone: A full stack message application
 
-* friendZone is a simple to use basic social-media-style message app that can be easily modified to add extra features or adapted to fit into other applications.
+* friendZone is a simple social-media-style message app that can be easily modified to add extra features or adapted for other applications
 
-* The app uses a secure login system with the ability to stay logged in for a predetermined length of time
+* Code: PHP, JavaScript, MySQL, jQuery/AJAX
+
+* The app includes a secure login system with the ability to stay logged in for a predetermined length of time
 
 * The design uses the [**Bootstrap**](https://getbootstrap.com/) framework to produce a clean responsive interface.
+  
+<br/><br/>
 
-![](RackMultipart20230926-1-vsy2qo_html_d2a9f29b985fdc2d.png)
-<img width="1486" scale="70" alt="Screenshot 2023-09-25 at 16 34 13" src="https://github.com/N1c-C/Full_Stack_Message_App_FriendZone/assets/103114303/700e6416-c737-480c-927d-2a11a2bcd30b">
+<p align="center" width="100%">
+    <img width="70%" src="https://github.com/N1c-C/Full_Stack_Message_App_FriendZone/assets/103114303/700e6416-c737-480c-927d-2a11a2bcd30b">
+  <p align='center'><strong> Pc/ Laptop view with a sticky navigation header </strong></p>
+</p>
 
+<br/><br/>
 
-_ **Pc/ Laptop View with a sticky navigation header** _
+<p align="center" width="100%">
+    <img width="40%" src="https://github.com/N1c-C/Full_Stack_Message_App_FriendZone/assets/103114303/badf57c6-75ab-46c4-b47e-91f5b707f9c6">
+  <p align='center'><strong> Mobile view with the navigation collapsing into a burger menu </strong></p>
+</p>
 
-![](RackMultipart20230926-1-vsy2qo_html_b1de02ec60f37d32.png)
-<img width="568" alt="Screenshot 2023-09-25 at 16 43 11" src="https://github.com/N1c-C/Full_Stack_Message_App_FriendZone/assets/103114303/badf57c6-75ab-46c4-b47e-91f5b707f9c6">
-_ **Mobile view with the navigation collapsing into a burger menu** _
+<br/>
 
-Check out the repository Wiki for useful design information about the layout and the entity- relations between attributes
+Check out the repository Wiki for useful design information about the layout and the entity relations between attributes
 
 # Requirements and Setup
 
